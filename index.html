@@ -120,8 +120,120 @@
         </article>
     </div>
 </section>
+<!-- order  -->
+<section class="order">
+    <div>
+        <h2>Order Here</h2>
+        <p>Place your order here!!</p>
+    </div>
+    <div class="">
+        <div class="row">
+            <form>
+                <label for="select">Flavor</label>
+                <br>
+                <select name="" id="">
+                    <option value="0">select flavor here</option>
+                    <option value="Cheese Pizza">Cheese Pizza</option>
+                    <option value="Chicken Tikka">Chicken Tikka Pizza</option>
+                    <option value="Hawaiian Pizza">Hawaiian Pizza</option>
+                    <option value="Margherita pizza">Margherita pizza</option>
+                    <option value="Pepperoni Pizza">pepperoni pizza</option>
+                    <option value="Sunchoke Pizza">Sunchoke Pizza</option>
+                </select>
+                <br>
 
-    </section>
-    
+                <label for="select">Size</label>
+                <br>
+                <select name="" id="">
+                    <option value="0">select size here</option>
+                    <option value="small">small @ksh. 500</option>
+                    <option value="medium">medium @ksh. 900</option>
+                    <option value="large">large @ksh. 1300</option>
+                </select>
+                <br>
+                <label for="select">Crust</label>
+                <br>
+                <select name="" id="">
+                    <option value="0">select crust here</option>
+                    <option value="stuffed">stuffed @kshs.150</option>
+                    <option value="Flat Bread">Flat Bread @kshs.160</option>
+                    <option value="Thin">Thin Crust @kshs.140</option>
+                    <option value="Cheese">Cheese @ksh. 170</option>
+                </select>
+                <br>
+                <label for="toppings">Toppings @kshs. 100</label><br>
+                <div>
+                    <input type="checkbox" class="custom-control-input" id="sausage" value="sausage" name="toppings">
+                    <label class="custom-control-label" for="Sausage">Sausage</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="custom-control-input" id="onion" value="onion" name="toppings">
+                    <label class="custom-control-label" for="Sausage">Onion</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="custom-control-input" id="garlic" value="garlic" name="toppings">
+                    <label class="custom-control-label" for="Sausage">Fresh garlic</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="custom-control-input" id="mushroom" value="mushroom" name="toppings">
+                    <label class="custom-control-label" for="Sausage">Mushroom</label>
+                </div>
+                <button type="submit" class="btn next">NEXT</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="info">
+        <div id="read">
+            <p>
+                <span>Our delivery team will get in touch with you</span>
+                <span>once you confirm your order for it to be</span>
+                <span>delivered. Kindly ensure all the deatails</span>
+                <span>are correct before you checkout.</span>
+            </p>
+            </div>
+            <div class="summary">
+                <p>Kindly Confirm Your Order</p>
+                <div id="orders">
+                    <table>
+                        <tr>
+                            <th>Flavor</th>
+                            <th>size</th>
+                            <th>Crust</th>
+                            <th>Toppings</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <td id='flavor-choice'></td>
+                            <td id='size-choice'></td>
+                            <td id="crust-choice"></td>
+                            <td id="toppings-choice"></td>
+                            <td id="total"></td>
+                        </tr>
+                    </table>
+                    <p id="total-cost"></p>
+                    <p id="bill"></p>
+                    <p id="delivery-cost">Delivery fee = Ksh. 200</p>
+                    <p id="text"></p>
+                </div>
+                <button class="btn addingPizza">Add Pizza</button>
+                <button class="btn" id="checkout">Checkout</button>
+                <button class="btn delivery">Delivery Location</button>
+            </div>
+                <div class="delivery">
+                    <form action="">
+                <div class="form-group">
+                    <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+                    <input type="number" id="phone" class="form-control mb-3" placeholder="Mobile Number">
+                    <input type="text" id="location" class="form-control mb-3" placeholder="Location Address">
+                    <button class="btn" id="final-order">Place Order</button>
+                </div>
+                </form>
+            </div>
+            </div>
+
+
+</section>
 </body>
 </html>

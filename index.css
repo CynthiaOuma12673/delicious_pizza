@@ -64,8 +64,6 @@ body {
 }
 
 /* about us */
-.about {
-}
 .about h2{
     text-align: center;
     padding: .5rem;
@@ -98,7 +96,7 @@ body {
     text-align: center;
     line-height: 2.5rem;
 }
-
+/* menu */
 .menu h2 {
     text-align: center;
     padding: .5rem;
@@ -137,3 +135,23 @@ body {
 	margin-bottom: 1.2rem;
 }
 
+/* order */
+.order {
+    background-image: url('images/ba.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+.order h2{
+    text-align: center;
+    padding: .5rem;
+    background-color:rgba(0, 0, 0, .9);
+}
+.order p {
+    text-align: center;
+    font-size: x-large;
+}
+.info p span{
+    display: block;
+}
