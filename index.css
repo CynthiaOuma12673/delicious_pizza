@@ -1,0 +1,50 @@
+body {
+    font-style: normal;
+    font-family: Roboto, sans-serif;
+    color: white;
+
+}
+.header {
+    background-image: url('images/ba.jpg');
+    background-attachment: fixed;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navigation {
+    display: flex;
+    background-color: rgba(0, 0, 0, .2);
+}
+.logo{
+    width: 50%;
+    display: flex;
+}
+.logo p {
+    margin-top: 1.5rem;
+    font-size: x-large;
+    font-style: inherit;
+}
+.logo img {
+    width: 5rem;
+    height: 5rem;
+}
+.nav{
+    width: 40%;
+    margin-top: 1rem;
+    font-size: x-large;
+}
+.nav ul {
+    display: flex;
+}
+
+.nav ul li a {
+    color: white;
+
+}
+.btn {
+    background-color: black;
+    color: white;
+    border-color: transparent;
+    margin-top: 1.5rem;
+    width: 5rem;
+}
