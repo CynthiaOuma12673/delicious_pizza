@@ -152,6 +152,10 @@ body {
     text-align: center;
     font-size: x-large;
 }
+.order-here{
+    display: flex;
+    background-color: rgba(0, 0, 0, .5);
+}
 .info p span{
     display: block;
 }
