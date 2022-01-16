@@ -155,7 +155,22 @@ body {
 .order-here{
     display: flex;
     background-color: rgba(0, 0, 0, .5);
+    height: 80vh;
+}
+.row {
+    width: 50%;
+    padding: 4rem;
+}
+.info p {
+    margin-top: 3rem;
 }
 .info p span{
     display: block;
+    line-height: 3rem;
+}
+.summary {
+    display: none;
+}
+.top {
+    display: flex;
 }
