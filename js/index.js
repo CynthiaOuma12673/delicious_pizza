@@ -74,15 +74,16 @@ $(document).ready(function(){
         let costoftopping=pizzaTopping.length*50;
         
         if ((pizzaSize=='0') && (pizzaCrust=='0')){
-            $('button.next').show();
-            $('#read').show();
-            $('div#summary').hide();
+            $('button.next').click(function(){
+            $('#read').hide();
+            $('#orders').show();
             alert('kindly choose the size and crust for your pizza');
+        });
         }
         else{
             $('button.next').hide();
             $('#read').hide();
-            $('div#summary').slideDown(1500);
+            $('#orders').slideDown(1500);
         }
 
         // calculating the total cost

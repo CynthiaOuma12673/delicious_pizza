@@ -10,6 +10,8 @@
     <!-- font roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="index.css">
 </head>
@@ -191,8 +193,8 @@
             </p>
             </div>
             <div class="summary">
-                <p>Kindly Confirm Your Order</p>
                 <div id="orders">
+                    <p>Kindly Confirm Your Order</p>
                     <table id="order-table">
                         <tr>
                             <th>Flavor</th>
@@ -209,11 +211,11 @@
                             <td id="total-cost"></td>
                         </tr>
                     </table>
+                </div>
                     <p id="totals-cost"></p>
                     <p id="bill"></p>
                     <p id="delivery-cost">Delivery fee = Ksh. 200</p>
                     <p id="text"></p>
-                </div>
                 <button class="btn addingPizza">Add Pizza</button>
                 <button class="btn" id="checkout">Checkout</button>
                 <button class="btn delivery">Delivery Location</button>
@@ -250,8 +252,5 @@
 <section class="footer">
     <p>Copyright @ 2021 DELICIOUS PIZZA</p>
 </section>
-
-<script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
-<script src="js/index.js"></script>
 </body>
 </html>

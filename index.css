@@ -168,9 +168,12 @@ body {
     display: block;
     line-height: 3rem;
 }
-.summary {
+#orders {
     display: none;
 }
+/* .summary {
+    display: none;
+}  */
 .top {
     display: flex;
 }
@@ -195,4 +198,9 @@ body {
 .footer {
     background-color: rgba(0, 0, 0, 0.9);
     text-align: center;
+}
+#order-table {
+    border-collapse: collapse;
+    border-color: green;
+    border-width: medium;
 }
