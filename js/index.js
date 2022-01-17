@@ -177,9 +177,21 @@ $(document).ready(function(){
             $('button#checkout').hide();
             $('button.addingPizza').hide();
             $('button.delivery').slideDown(1200);
-            $('#')
+            $('#totals-cost').append('your cost is:'+ checkTotal);
         });
+        
+        // button for home delivery
+        $('button.delivery').click(function(){
+            $('#order-table').hide();
+            $('.summary p').hide();
+            $('.delivery-address').slideDown(1500);
+            $('#addedprice').hide();
+            $('button.delivery').hide();
+            $('#totals-cost').hide();
+            let amountOfDelivery=checkTotal+200;
+            $('#bill').append('your total cost is:' + amountOfDelivery);
 
+        });
 
 
 });
