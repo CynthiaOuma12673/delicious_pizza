@@ -197,7 +197,11 @@ $(document).ready(function(){
             $('#totals-cost').hide();
             $('.delivery-address').hide();
             $('buttoon#complete-order').hide();
-            
-        })
+
+            // inputting location details
+            let name=$('input#name').val();
+            let mobileNumber=$('input#phone').val();
+            let place=$('input#location').val();
+        });
 
 });
