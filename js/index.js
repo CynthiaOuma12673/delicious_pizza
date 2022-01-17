@@ -172,7 +172,14 @@ $(document).ready(function(){
         });
         
         // button for checkout
-        
+
+        $('button#checkout').click(function(){
+            $('button#checkout').hide();
+            $('button.addingPizza').hide();
+            $('button.delivery').slideDown(1200);
+            $('#')
+        });
+
 
 
 });
