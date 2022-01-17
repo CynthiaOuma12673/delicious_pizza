@@ -149,7 +149,7 @@ body {
     background-color:rgba(0, 0, 0, .9);
 }
 .order p {
-    text-align: center;
+    text-align: left;
     font-size: x-large;
 }
 .order-here{
@@ -158,22 +158,23 @@ body {
     height: 80vh;
 }
 .row {
-    width: 50%;
+    width: 40%;
     padding: 4rem;
 }
 .info p {
-    margin-top: 3rem;
+    margin-top: .5rem;
 }
 .info p span{
     display: block;
-    line-height: 3rem;
+    line-height: 2rem;
 }
-#orders {
-    display: none;
+#delivery-cost {
+    text-align: left;
+    margin-top: 2rem;
 }
 /* .summary {
     display: none;
-}  */
+}   */
 .top {
     display: flex;
 }
@@ -199,8 +200,7 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     text-align: center;
 }
-#order-table {
-    border-collapse: collapse;
-    border-color: green;
-    border-width: medium;
+table th ,td {
+    border: 1px ;
+    padding: 8px;
 }

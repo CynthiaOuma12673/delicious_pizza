@@ -1,18 +1,18 @@
 let cost,costofcrust,costoftopping;
 let total=0;
 
-function Orderpizza(flavor,size,crust,topping,total){
+function Orderpizza(flavor,size,crust,toppings,total){
     this.flavor=flavor;
     this.size=size;
     this.crust=crust;
-    this.topping=topping;
-    this.tital=total;
+    this.toppings=toppings;
+    this.total=total;
 }
 
 // validation of the next button
 $(document).ready(function(){
     $('button.next').click(function(event){
-        let pizzaFlavor=$('#flavor option:selected').val();
+        let pizzaFlavor=$('.flavor option:selected').val();
         let pizzaSize=$('#size option:selected').val();
         let pizzaCrust=$('#crust option:selected').val();
         let pizzaTopping=[];
@@ -74,11 +74,10 @@ $(document).ready(function(){
         let costoftopping=pizzaTopping.length*100;
         
         if ((pizzaSize=='0') && (pizzaCrust=='0')){
-            $('button.next').click();
-            $('#read').hide();
-            $('#orders').show();
+            $('button.next').show();
+            $('#read').show();
+            $('#orders').hide();
             alert('kindly choose the size and crust for your pizza');
-        
         }
         else{
             $('button.next').hide();
@@ -100,8 +99,8 @@ $(document).ready(function(){
         $('#total-cost').html(total);
 
         // validating the button for adding another pizza
-        $('button.addingPizza').click(function(event){
-            let pizzaFlavor=$('#flavor option:selected').val();
+        $('button.addingPizza').click(function(){
+            let pizzaFlavor=$('.flavor option:selected').val();
             let pizzaSize=$('#size option:selected').val();
             let pizzaCrust=$('#crust option:selected').val();
             let pizzaTopping=[];
@@ -167,8 +166,10 @@ $(document).ready(function(){
         checkTotal=checkTotal + total;
 
         // constructor functions to add new orders
+        $('button.addingPizza').click(function(){
         let orderNew = new Orderpizza(pizzaFlavor, pizzaSize,pizzaCrust,pizzaTopping,total);
         $("#orders").append('<tr><td id="flavor-choice">'+orderNew.flavor +'</td><td id="size-choice">' + orderNew.size + '</td><td id="crust-choice">'+orderNew.crust + '</td><td id="toppings-choice">'+orderNew.topping+'</td><td id="total-cost">'+orderNew.total+'</td></tr>');
+        });
         });
         
         // button for checkout
@@ -177,6 +178,7 @@ $(document).ready(function(){
             $('button#checkout').hide();
             $('button.addingPizza').hide();
             $('button.delivery').slideDown(1200);
+            $('#delivery-cost').slideDown(1000);
             $('#totals-cost').append('your cost is:'+ checkTotal);
         });
         
@@ -185,7 +187,7 @@ $(document).ready(function(){
             $('#order-table').hide();
             $('.summary p').hide();
             $('.delivery-address').slideDown(1500);
-            $('#addedprice').hide();
+            $('#delivery-cost').hide();
             $('button.delivery').hide();
             $('#totals-cost').hide();
             let amountOfDelivery=checkTotal+200;
@@ -205,9 +207,9 @@ $(document).ready(function(){
 
             // for if inputs on delivery address
             if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
-                $("#message").append(name+", Your order has been received, wait for delivery to "+ location + ". you should have ksh.200 for delivery ");
+                $("#text").append(name+", Your order has been received, wait for delivery to " + location + ". you should have ksh.200 for delivery ");
                 $("#bill").hide();
-                $("#message").slideDown(1000);  
+                $("#text").slideDown(1000);  
             }
             else {
                 alert("Kndly ensure your delivery details are correct");
@@ -216,5 +218,5 @@ $(document).ready(function(){
             }
             event.preventDefault();
             });
-            
         });
+        
