@@ -71,7 +71,7 @@ $(document).ready(function(){
         }
         
         // calculating the topping cost
-        let costoftopping=pizzaTopping.length*50;
+        let costoftopping=pizzaTopping.length*100;
         
         if ((pizzaSize=='0') && (pizzaCrust=='0')){
             $('button.next').click();
@@ -88,7 +88,6 @@ $(document).ready(function(){
 
         // calculating the total cost
         total=cost + costofcrust + costoftopping;
-        console.log(total);
         let checkTotal=0;
         checkTotal=checkTotal + total;
         
@@ -110,7 +109,7 @@ $(document).ready(function(){
                 pizzaTopping.push($(this).val());
             });
         });
-            console.log(pizzaTopping.join(''));
+            // console.log(pizzaTopping.join(''));
             // selecting pizza sizes
         switch(pizzaSize){
             case'0':
@@ -206,7 +205,7 @@ $(document).ready(function(){
 
             // for if inputs on delivery address
             if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
-                $("#message").append(name+", Your order has been received, wait for delivery to "+location+ ". you should have ksh. "+amountOfDelivery);
+                $("#message").append(name+", Your order has been received, wait for delivery to "+ location + ". you should have ksh.200 for delivery ");
                 $("#bill").hide();
                 $("#message").slideDown(1000);  
             }
