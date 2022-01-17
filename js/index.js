@@ -74,11 +74,11 @@ $(document).ready(function(){
         let costoftopping=pizzaTopping.length*50;
         
         if ((pizzaSize=='0') && (pizzaCrust=='0')){
-            $('button.next').click(function(){
+            $('button.next').click();
             $('#read').hide();
             $('#orders').show();
             alert('kindly choose the size and crust for your pizza');
-        });
+        
         }
         else{
             $('button.next').hide();
