@@ -202,6 +202,19 @@ $(document).ready(function(){
             let name=$('input#name').val();
             let mobileNumber=$('input#phone').val();
             let place=$('input#location').val();
-        });
 
-});
+            // for if inputs on delivery address
+            if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
+                $("#message").append(name+", Your order has been received, wait for delivery to "+location+ ". you should have ksh. "+amountOfDelivery);
+                $("#bill").hide();
+                $("#message").slideDown(1000);  
+            }
+            else {
+                alert("Kndly ensure your delivery details are correct");
+                $(".deliver-address").show();
+                $("button#complete-order").show();
+            }
+            event.preventDefault();
+            });
+            
+        });
