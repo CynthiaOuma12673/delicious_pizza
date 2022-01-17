@@ -190,8 +190,14 @@ $(document).ready(function(){
             $('#totals-cost').hide();
             let amountOfDelivery=checkTotal+200;
             $('#bill').append('your total cost is:' + amountOfDelivery);
-
         });
-
+        
+        // place order btn
+        $('button#complete-order').click(function(event){
+            $('#totals-cost').hide();
+            $('.delivery-address').hide();
+            $('buttoon#complete-order').hide();
+            
+        })
 
 });
